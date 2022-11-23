@@ -1,5 +1,9 @@
 package org.camargovf.controllers;
 
+/*
+@author Camargo https://github.com/Camargovf
+ */
+
 import org.camargovf.entities.Worker;
 import org.camargovf.repositories.WorkerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
