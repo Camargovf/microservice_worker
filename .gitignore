@@ -1,0 +1,16 @@
+/.idea/.gitignore
+/target/classes/application.properties
+/.idea/aws.xml
+/.idea/compiler.xml
+/target/classes/data.sql
+/.idea/encodings.xml
+/.idea/jarRepositories.xml
+/.idea/jpa-buddy.xml
+/.idea/markdown.xml
+/.idea/misc.xml
+/.idea/uiDesigner.xml
+/.idea/vcs.xml
+/target/classes/org/camargovf/entities/Worker.class
+/target/classes/org/camargovf/WorkerMainApp.class
+/target/classes/org/camargovf/repositories/WorkerRepository.class
+/target/classes/org/camargovf/controllers/WorkerResource.class
