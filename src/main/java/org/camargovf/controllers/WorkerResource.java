@@ -1,9 +1,11 @@
 package org.camargovf.controllers;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /*
 @author Camargo https://github.com/Camargovf
  */
 
+import lombok.extern.slf4j.Slf4j;
 import org.camargovf.entities.Worker;
 import org.camargovf.repositories.WorkerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-
+@Slf4j
 @RestController
 @RequestMapping(value = "/workers")
 public class WorkerResource {
 
+    @Autowired
+    Logger logger = LoggerFactory.getLogger(WorkerResource.class);
     @Autowired
     private WorkerRepository repository;
 
@@ -32,6 +36,7 @@ public class WorkerResource {
     @GetMapping(value = "/{id}")
     public ResponseEntity<Worker> findById(@PathVariable Long id) {
         Worker obj = repository.findById(id).get();
+        logger.info("Worker found: " + obj);
         return ResponseEntity.ok(obj);
     }
 }
