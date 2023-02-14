@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.camargovf.entities.Worker;
 import org.camargovf.repositories.WorkerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@RefreshScope
 @Slf4j
 @RestController
 @RequestMapping(value = "/workers")
@@ -28,7 +30,7 @@ public class WorkerResource {
     private Environment env;
 
     @Autowired
-    Logger logger = LoggerFactory.getLogger(WorkerResource.class);
+     Logger logger = LoggerFactory.getLogger(WorkerResource.class);
 
     @Autowired
     private WorkerRepository repository;
